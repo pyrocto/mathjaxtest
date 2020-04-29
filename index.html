@@ -1,15 +1,18 @@
 <html>
-  <head>
-    <script>
-      MathJax = { options: { skipHtmlTags: { '[-]': ['pre'] } } };
-    </script>
+<head>
+<title>MathJax TeX Test Page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], skipTags:["script","noscript","style","textarea","code"]}});
+</script>
     <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js">
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML">
     </script>
-  </head>
-  <body>
-    <pre>
-foo x<a>b $x<a>b$
-    </pre>
-  </body>
+</head>
+<body>
+<pre>
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+The only requirement around < is that you put a space after it: $b < a > x$ vs. $b<a>x.$
+</pre>
+</body>
 </html>
